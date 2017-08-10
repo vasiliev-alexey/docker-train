@@ -9,3 +9,4 @@ curl https://get.docker.com > linux_install.sh
 > sudo groupadd docker  
 sudo gpasswd -a $USER docker  
 sudo service docker restart
+docker version
