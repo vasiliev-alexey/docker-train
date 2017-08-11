@@ -1,7 +1,7 @@
 #/bin/bash
 
 dir=cowsay
-image_name=test/cowsay-dockerfile
+image_name=avasiliev/cowsay-dockerfile
 filename=Dockerfile
 
 
@@ -26,6 +26,7 @@ docker images  |  grep $image_name | awk '{print $1}' | xargs docker rmi
 
 
 docker build -t $image_name .
+docker push $image_name
 
 if [ $# -eq 0 ]; then
    docker run $image_name
